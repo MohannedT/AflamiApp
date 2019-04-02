@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335B22540BBF00329ADD /* AppDelegate.swift */; };
+		E25C335E22540BBF00329ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335D22540BBF00329ADD /* ViewController.swift */; };
+		E25C336122540BBF00329ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25C335F22540BBF00329ADD /* Main.storyboard */; };
+		E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25C336222540BBF00329ADD /* AflamiApp.xcdatamodeld */; };
+		E25C336622540BBF00329ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25C336522540BBF00329ADD /* Assets.xcassets */; };
+		E25C336922540BBF00329ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25C336722540BBF00329ADD /* LaunchScreen.storyboard */; };
+		E25C337422540BBF00329ADD /* AflamiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C337322540BBF00329ADD /* AflamiAppTests.swift */; };
+		E25C337F22540BBF00329ADD /* AflamiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C337E22540BBF00329ADD /* AflamiAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E25C337022540BBF00329ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E25C335022540BBE00329ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E25C335722540BBE00329ADD;
+			remoteInfo = AflamiApp;
+		};
+		E25C337B22540BBF00329ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E25C335022540BBE00329ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E25C335722540BBE00329ADD;
+			remoteInfo = AflamiApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E25C335822540BBE00329ADD /* AflamiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AflamiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25C335B22540BBF00329ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E25C335D22540BBF00329ADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E25C336022540BBF00329ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E25C336322540BBF00329ADD /* AflamiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AflamiApp.xcdatamodel; sourceTree = "<group>"; };
+		E25C336522540BBF00329ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E25C336822540BBF00329ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E25C336A22540BBF00329ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25C336F22540BBF00329ADD /* AflamiAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AflamiAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25C337322540BBF00329ADD /* AflamiAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AflamiAppTests.swift; sourceTree = "<group>"; };
+		E25C337522540BBF00329ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E25C337A22540BBF00329ADD /* AflamiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AflamiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E25C337E22540BBF00329ADD /* AflamiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AflamiAppUITests.swift; sourceTree = "<group>"; };
+		E25C338022540BBF00329ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E25C335522540BBE00329ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C336C22540BBF00329ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C337722540BBF00329ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E25C334F22540BBE00329ADD = {
+			isa = PBXGroup;
+			children = (
+				E25C335A22540BBE00329ADD /* AflamiApp */,
+				E25C337222540BBF00329ADD /* AflamiAppTests */,
+				E25C337D22540BBF00329ADD /* AflamiAppUITests */,
+				E25C335922540BBE00329ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E25C335922540BBE00329ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E25C335822540BBE00329ADD /* AflamiApp.app */,
+				E25C336F22540BBF00329ADD /* AflamiAppTests.xctest */,
+				E25C337A22540BBF00329ADD /* AflamiAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E25C335A22540BBE00329ADD /* AflamiApp */ = {
+			isa = PBXGroup;
+			children = (
+				E25C335B22540BBF00329ADD /* AppDelegate.swift */,
+				E25C335D22540BBF00329ADD /* ViewController.swift */,
+				E25C335F22540BBF00329ADD /* Main.storyboard */,
+				E25C336522540BBF00329ADD /* Assets.xcassets */,
+				E25C336722540BBF00329ADD /* LaunchScreen.storyboard */,
+				E25C336A22540BBF00329ADD /* Info.plist */,
+				E25C336222540BBF00329ADD /* AflamiApp.xcdatamodeld */,
+			);
+			path = AflamiApp;
+			sourceTree = "<group>";
+		};
+		E25C337222540BBF00329ADD /* AflamiAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				E25C337322540BBF00329ADD /* AflamiAppTests.swift */,
+				E25C337522540BBF00329ADD /* Info.plist */,
+			);
+			path = AflamiAppTests;
+			sourceTree = "<group>";
+		};
+		E25C337D22540BBF00329ADD /* AflamiAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E25C337E22540BBF00329ADD /* AflamiAppUITests.swift */,
+				E25C338022540BBF00329ADD /* Info.plist */,
+			);
+			path = AflamiAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E25C335722540BBE00329ADD /* AflamiApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E25C338322540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiApp" */;
+			buildPhases = (
+				E25C335422540BBE00329ADD /* Sources */,
+				E25C335522540BBE00329ADD /* Frameworks */,
+				E25C335622540BBE00329ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AflamiApp;
+			productName = AflamiApp;
+			productReference = E25C335822540BBE00329ADD /* AflamiApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E25C336E22540BBF00329ADD /* AflamiAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E25C338622540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiAppTests" */;
+			buildPhases = (
+				E25C336B22540BBF00329ADD /* Sources */,
+				E25C336C22540BBF00329ADD /* Frameworks */,
+				E25C336D22540BBF00329ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E25C337122540BBF00329ADD /* PBXTargetDependency */,
+			);
+			name = AflamiAppTests;
+			productName = AflamiAppTests;
+			productReference = E25C336F22540BBF00329ADD /* AflamiAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E25C337922540BBF00329ADD /* AflamiAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E25C338922540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiAppUITests" */;
+			buildPhases = (
+				E25C337622540BBF00329ADD /* Sources */,
+				E25C337722540BBF00329ADD /* Frameworks */,
+				E25C337822540BBF00329ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E25C337C22540BBF00329ADD /* PBXTargetDependency */,
+			);
+			name = AflamiAppUITests;
+			productName = AflamiAppUITests;
+			productReference = E25C337A22540BBF00329ADD /* AflamiAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E25C335022540BBE00329ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Ahmed M. Hassan";
+				TargetAttributes = {
+					E25C335722540BBE00329ADD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JUUZV79G5F;
+						ProvisioningStyle = Automatic;
+					};
+					E25C336E22540BBF00329ADD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JUUZV79G5F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E25C335722540BBE00329ADD;
+					};
+					E25C337922540BBF00329ADD = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JUUZV79G5F;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E25C335722540BBE00329ADD;
+					};
+				};
+			};
+			buildConfigurationList = E25C335322540BBE00329ADD /* Build configuration list for PBXProject "AflamiApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E25C334F22540BBE00329ADD;
+			productRefGroup = E25C335922540BBE00329ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E25C335722540BBE00329ADD /* AflamiApp */,
+				E25C336E22540BBF00329ADD /* AflamiAppTests */,
+				E25C337922540BBF00329ADD /* AflamiAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E25C335622540BBE00329ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25C336922540BBF00329ADD /* LaunchScreen.storyboard in Resources */,
+				E25C336622540BBF00329ADD /* Assets.xcassets in Resources */,
+				E25C336122540BBF00329ADD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C336D22540BBF00329ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C337822540BBF00329ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E25C335422540BBE00329ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25C335E22540BBF00329ADD /* ViewController.swift in Sources */,
+				E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */,
+				E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C336B22540BBF00329ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25C337422540BBF00329ADD /* AflamiAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E25C337622540BBF00329ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E25C337F22540BBF00329ADD /* AflamiAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E25C337122540BBF00329ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E25C335722540BBE00329ADD /* AflamiApp */;
+			targetProxy = E25C337022540BBF00329ADD /* PBXContainerItemProxy */;
+		};
+		E25C337C22540BBF00329ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E25C335722540BBE00329ADD /* AflamiApp */;
+			targetProxy = E25C337B22540BBF00329ADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E25C335F22540BBF00329ADD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E25C336022540BBF00329ADD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E25C336722540BBF00329ADD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E25C336822540BBF00329ADD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E25C338122540BBF00329ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E25C338222540BBF00329ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E25C338422540BBF00329ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E25C338522540BBF00329ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		E25C338722540BBF00329ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AflamiApp.app/AflamiApp";
+			};
+			name = Debug;
+		};
+		E25C338822540BBF00329ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AflamiApp.app/AflamiApp";
+			};
+			name = Release;
+		};
+		E25C338A22540BBF00329ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AflamiApp;
+			};
+			name = Debug;
+		};
+		E25C338B22540BBF00329ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = JUUZV79G5F;
+				INFOPLIST_FILE = AflamiAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eg.com.iti.AflamiAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AflamiApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E25C335322540BBE00329ADD /* Build configuration list for PBXProject "AflamiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25C338122540BBF00329ADD /* Debug */,
+				E25C338222540BBF00329ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E25C338322540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25C338422540BBF00329ADD /* Debug */,
+				E25C338522540BBF00329ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E25C338622540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25C338722540BBF00329ADD /* Debug */,
+				E25C338822540BBF00329ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E25C338922540BBF00329ADD /* Build configuration list for PBXNativeTarget "AflamiAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E25C338A22540BBF00329ADD /* Debug */,
+				E25C338B22540BBF00329ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E25C336222540BBF00329ADD /* AflamiApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E25C336322540BBF00329ADD /* AflamiApp.xcdatamodel */,
+			);
+			currentVersion = E25C336322540BBF00329ADD /* AflamiApp.xcdatamodel */;
+			path = AflamiApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E25C335022540BBE00329ADD /* Project object */;
+}
