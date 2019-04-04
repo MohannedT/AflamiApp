@@ -8,22 +8,29 @@ class ModelLayer{
     
     
     //MARK: - Get all movies
-    func getMoviesList (completionHandler : @escaping (Array<Movie>?, Error?) -> Void){
+    func getMoviesList (sortType : SortType, completionHandler : @escaping (Array<Movie>?, Error?) -> Void){
         var movieslist : Array<Movie> = []
-        let url : String = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=\(apiKey)"
+        var url : String?
         
-        networkLayer.executeNetwordRequest(url: url) { (value, error) in
+        switch sortType{
+        case .Popularity:
+            url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=\(apiKey)"
+        case .TopRated:
+            url = "https://api.themoviedb.org/3/discover/movie?sort_by=top_rated&api_key=\(apiKey)"
+        }
+        
+        networkLayer.executeNetwordRequest(url: url!) { (value, error) in
             if let result = value {
                 let moviesArray = result["results"] as! Array<[String : Any]>
                 for item in moviesArray{
                     
                     let movie = Movie()
-                    movie.id = item["id"] as! Int
-                    movie.posterPath = item["poster_path"] as! String
-                    movie.releaseDate = item["release_date"] as! String
-                    movie.title = item["original_title"] as! String
-                    movie.voteAverage = item["vote_average"] as! Double
-                    movie.originalLanguage = item["original_language"] as! String
+                    movie.id = item["id"] as? Int ?? 0
+                    movie.posterPath = item["poster_path"] as? String ?? ""
+                    movie.releaseDate = item["release_date"] as? String ?? ""
+                    movie.title = item["original_title"] as? String ?? ""
+                    movie.voteAverage = item["vote_average"] as? Double ?? 0
+                    movie.originalLanguage = item["original_language"] as? String ?? ""
                     
                     movieslist.append(movie)
                     print("\(movie.id)  \(movie.title)  \(movieslist.count)")

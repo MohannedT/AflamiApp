@@ -18,28 +18,22 @@ class HomeVC: UIViewController {
     let modelLayer : ModelLayer = ModelLayer()
     var moviesList : Array<Movie> = []
     
-    //MARK: - Setting grid view
-    public var customCollectionViewLayout: UICustomCollectionViewLayout? {
-        get {
-            return collectionView as? UICustomCollectionViewLayout
-        }
-        set {
-            if newValue != nil {
-                self.collectionView?.collectionViewLayout = newValue!
-            }
-        }
-    }
+    // MARK: - Constants
+    var sortType = SortType.Popularity
+    let CORNER_RADIUS : CGFloat = 10
+    let CELL_IDENTIFIER : String = "homeCell"
+    let DETAILS_VIEW_ID : String = "detailsView"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.customCollectionViewLayout?.delegate = self
-        self.customCollectionViewLayout?.numberOfColumns = 2
-        //self.customCollectionViewLayout?.cellPadding = 30
+        getMoviesListBySortType(sortType: .Popularity)
         
-        //navigationController?.navigationBar.prefersLargeTitles = true
-        
-        self.modelLayer.getMoviesList(completionHandler: { (value, error) in
+    }
+    
+    // MARK: - Get movies list
+    func getMoviesListBySortType(sortType : SortType){
+        self.modelLayer.getMoviesList(sortType: sortType, completionHandler: { (value, error) in
             if let result = value {
                 DispatchQueue.main.async {
                     self.moviesList = result
@@ -52,24 +46,51 @@ class HomeVC: UIViewController {
         })
     }
     
-    
-}
-
-// MARK: - Flow layout delegate
-extension HomeVC : CustomLayoutDelegate{
-    
-    struct Model {
-        var index: Int
-        var isBig: Bool
+    // MARK: - Change sort type of movies by popularity or top rated
+    @IBAction func sortMovies(_ sender: Any) {
+        
+        let actionSheet = UIAlertController.init(title: "Choose prefered sorting type", message: nil, preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Popularity", style: UIAlertActionStyle.default, handler: { (action) in
+            if self.sortType != .Popularity{
+                self.getMoviesListBySortType(sortType: .Popularity)
+                print("popularity")
+                self.sortType = .Popularity
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Top Rated", style: UIAlertActionStyle.default, handler: { (action) in
+            if self.sortType != .TopRated{
+                self.getMoviesListBySortType(sortType: .TopRated)
+                print("Top Rated")
+                self.sortType = .TopRated
+            }
+        }))
+        
+        actionSheet.addAction(UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (action) in
+            //If you tap outside the UIAlertController action buttons area, then also this handler gets called.
+        }))
+        
+        //Present the controller
+        self.present(actionSheet, animated: true, completion: nil)
     }
     
-    func collectionView(_ collectionView: UICollectionView, heightForItemAt indexPath: IndexPath, with width: CGFloat) -> CGFloat {
-
-        //        let heightSizes = [100,216]
-        return CGFloat(UIImage(data: moviesList[indexPath.row].image!)!.size.height)
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        switch segue.identifier!{
+        case DETAILS_VIEW_ID:
+            if let detailsVC = segue.destination as? DetailedMovieTableVC{
+                let indexPath = self.collectionView.indexPathsForSelectedItems?[0]
+                detailsVC.movie = moviesList[(indexPath?.row)!]
+            }
+            
+        default:
+            print("")
+        }
     }
-    
 }
+
 
 // MARK: - Data Source
 extension HomeVC : UICollectionViewDataSource{
@@ -88,9 +109,17 @@ extension HomeVC : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as! HomeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIER, for: indexPath) as! HomeCell
         
-        //cell.textLabel?.text = moviesList[indexPath.row].title
+        // Set movie name
+        cell.movieNameLabel?.text = moviesList[indexPath.row].title
+        cell.movieNameLabel.layer.masksToBounds = true
+        cell.movieNameLabel.layer.cornerRadius = CORNER_RADIUS
+        cell.movieNameLabel.sizeToFit()
+        
+        // Set movie image
+        cell.imageView.layer.cornerRadius = CORNER_RADIUS
+        cell.imageView.layer.masksToBounds = true
         if let image = moviesList[indexPath.row].image {
             cell.imageView?.image = UIImage(data: image)
         } else {
@@ -103,5 +132,10 @@ extension HomeVC : UICollectionViewDataSource{
         
     }
         
+}
+
+enum SortType{
+    case Popularity
+    case TopRated
 }
 

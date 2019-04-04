@@ -11,5 +11,8 @@ import UIKit
 class HomeCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView : UIImageView!
+    @IBOutlet weak var movieNameLabel: UILabel!
+   
+   // TODO: Add ctor to edit corner radius
     
 }

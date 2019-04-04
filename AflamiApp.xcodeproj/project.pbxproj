@@ -24,7 +24,6 @@
 		E25C339722540D9A00329ADD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339622540D9A00329ADD /* Review.swift */; };
 		E25C339A22540E1500329ADD /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339922540E1500329ADD /* NetworkLayer.swift */; };
 		E25C339D22540E5500329ADD /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339C22540E5500329ADD /* DataLayer.swift */; };
-		E25C33A02254107600329ADD /* HomeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339F2254107600329ADD /* HomeTableVC.swift */; };
 		E25C33A2225410B900329ADD /* DetailedMovieTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */; };
 		E25C33A422541F6C00329ADD /* blank-email-pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E25C33A322541F6C00329ADD /* blank-email-pixels.jpg */; };
 		E25C33A62254252800329ADD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A52254252800329ADD /* HomeCell.swift */; };
@@ -76,7 +75,6 @@
 		E25C339622540D9A00329ADD /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		E25C339922540E1500329ADD /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		E25C339C22540E5500329ADD /* DataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
-		E25C339F2254107600329ADD /* HomeTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableVC.swift; sourceTree = "<group>"; };
 		E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMovieTableVC.swift; sourceTree = "<group>"; };
 		E25C33A322541F6C00329ADD /* blank-email-pixels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-email-pixels.jpg"; sourceTree = "<group>"; };
 		E25C33A52254252800329ADD /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				E25C335D22540BBF00329ADD /* HomeVC.swift */,
-				E25C339F2254107600329ADD /* HomeTableVC.swift */,
 				E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */,
 				E25C33A52254252800329ADD /* HomeCell.swift */,
 			);
@@ -480,7 +477,6 @@
 				E25C339522540D8300329ADD /* Trailer.swift in Sources */,
 				E25C339722540D9A00329ADD /* Review.swift in Sources */,
 				E25C339022540CD400329ADD /* ModelLayer.swift in Sources */,
-				E25C33A02254107600329ADD /* HomeTableVC.swift in Sources */,
 				E25C33A2225410B900329ADD /* DetailedMovieTableVC.swift in Sources */,
 				E25C339D22540E5500329ADD /* DataLayer.swift in Sources */,
 				E25C33A822542D8200329ADD /* UICustomCollectionViewLayout.swift in Sources */,

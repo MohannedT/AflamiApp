@@ -1,0 +1,6 @@
+framework module Pods_AflamiAppUITests {
+  umbrella header "Pods-AflamiAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
