@@ -10,6 +10,7 @@
 		41F3F17EBCC5F8FE8FD392A1 /* Pods_AflamiAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891043126FF0672AF068FEE8 /* Pods_AflamiAppTests.framework */; };
 		581EEC5A1826879BE2E29DF6 /* Pods_AflamiAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE0BB60B8D49D8341C11A46C /* Pods_AflamiAppUITests.framework */; };
 		9EA1D44ABFC4B33D8C7CA1F1 /* Pods_AflamiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F56D9A0FEE38E977BB4ED6E /* Pods_AflamiApp.framework */; };
+		E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */; };
 		E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335B22540BBF00329ADD /* AppDelegate.swift */; };
 		E25C335E22540BBF00329ADD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335D22540BBF00329ADD /* HomeVC.swift */; };
 		E25C336122540BBF00329ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25C335F22540BBF00329ADD /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		832618AAC18282FE7E253CE5 /* Pods-AflamiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AflamiAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AflamiAppTests/Pods-AflamiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		891043126FF0672AF068FEE8 /* Pods_AflamiAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AflamiAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB5F6ED88D852B5ABC56818 /* Pods-AflamiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AflamiApp.debug.xcconfig"; path = "Target Support Files/Pods-AflamiApp/Pods-AflamiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieVC.swift; sourceTree = "<group>"; };
 		E25C335822540BBE00329ADD /* AflamiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AflamiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25C335B22540BBF00329ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25C335D22540BBF00329ADD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = ../HomeVC.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				E25C335D22540BBF00329ADD /* HomeVC.swift */,
 				E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */,
 				E25C33A52254252800329ADD /* HomeCell.swift */,
+				E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */,
 				E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */,
 				E25C33A62254252800329ADD /* HomeCell.swift in Sources */,
+				E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */,
 				E25C339322540D6500329ADD /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

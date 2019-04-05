@@ -22,7 +22,7 @@ class HomeVC: UIViewController {
     var sortType = SortType.Popularity
     let CORNER_RADIUS : CGFloat = 10
     let CELL_IDENTIFIER : String = "homeCell"
-    let DETAILS_VIEW_ID : String = "detailsView"
+    let DETAILS_VIEW_ID : String = "showMovie"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,9 +80,9 @@ class HomeVC: UIViewController {
         
         switch segue.identifier!{
         case DETAILS_VIEW_ID:
-            if let detailsVC = segue.destination as? DetailedMovieTableVC{
+            if let showMovieVC = segue.destination as? ShowMovieVC{
                 let indexPath = self.collectionView.indexPathsForSelectedItems?[0]
-                detailsVC.movie = moviesList[(indexPath?.row)!]
+                showMovieVC.movie = moviesList[(indexPath?.row)!]
             }
             
         default:
