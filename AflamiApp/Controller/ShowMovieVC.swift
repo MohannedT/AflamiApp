@@ -22,12 +22,11 @@ class ShowMovieVC: UIViewController {
     // MARK: - Data
     let modelLayer : ModelLayer = ModelLayer()
     var movie : Movie?
-//    var trailersList : Array<Trailer> = []
-//    var reviewsList : Array<Review> = []
     
     // MARK: - Constants
     let TRAILERS_CELL_ID : String = "trailersCell"
     let REVIEWS_CELL_ID : String = "reviewsCell"
+    let CORNER_RADIUS : CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +35,22 @@ class ShowMovieVC: UIViewController {
         getTrailers()
         getReviews()
         
-//        trailersTableView.delegate = self
-//        trailersTableView.dataSource = self
-//        trailersTableView.estimatedRowHeight = 80
-//        trailersTableView.rowHeight = UITableViewAutomaticDimension
-        //reviewsTableView.frame.size = reviewsTableView.contentSize.height
+        trailersTableView.rowHeight = UITableViewAutomaticDimension
         
-        // 2
+        // Edit items corner radius
+        labelReleaseDate.layer.masksToBounds = true
+        labelReleaseDate.layer.cornerRadius = CORNER_RADIUS
+        
+        labelOriginalLanguage.layer.cornerRadius = CORNER_RADIUS
+        labelOriginalLanguage.layer.masksToBounds = true
+        
+        imagePosterImage.layer.cornerRadius = CORNER_RADIUS
+        imagePosterImage.layer.masksToBounds = true
+
+
+        // Adding favourite button
         let addToFavouriteButton : UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(self.addToFavouriteTapped))
-        // 3
+        
         self.navigationItem.setRightBarButtonItems([addToFavouriteButton], animated: true)
         
         
@@ -114,13 +120,13 @@ extension ShowMovieVC : UITableViewDataSource, UITableViewDelegate{
     
     // MARK: - Trailers cells
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: TRAILERS_CELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TRAILERS_CELL_ID, for: indexPath) as! ShowMovieTrailersCell
         
         let site : String = movie?.trailers[indexPath.row].site ?? ""
         let size : Int = movie?.trailers[indexPath.row].size ?? 0
         
-        cell.textLabel?.text = movie?.trailers[indexPath.row].name ?? ""
-        cell.detailTextLabel?.text = "\(site), \(size)p"
+        cell.labelName?.text = movie?.trailers[indexPath.row].name ?? ""
+        cell.labelDescription?.text = "\(site), \(size)p"
         
         return cell
         
@@ -137,10 +143,9 @@ extension ShowMovieVC : UICollectionViewDataSource, UICollectionViewDelegate{
     }
     
     
-    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         
-        let cell = reviewsCollectionView.dequeueReusableCell(withReuseIdentifier: REVIEWS_CELL_ID, for: indexPath) as! ShowMovieCollectionViewCell
+        let cell = reviewsCollectionView.dequeueReusableCell(withReuseIdentifier: REVIEWS_CELL_ID, for: indexPath) as! ShowMovieReviewsCell
         
         cell.author.text = movie?.reviews[indexPath.row].author ?? ""
         cell.content.text = movie?.reviews[indexPath.row].content ?? ""

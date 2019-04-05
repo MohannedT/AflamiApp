@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowMovieCollectionViewCell: UICollectionViewCell {
+class ShowMovieReviewsCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var author: UILabel!
