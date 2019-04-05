@@ -109,7 +109,7 @@ extension HomeVC : UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIER, for: indexPath) as! HomeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL_IDENTIFIER, for: indexPath) as! HomeCollectionViewCell
         
         // Set movie name
         cell.movieNameLabel?.text = moviesList[indexPath.row].title
@@ -131,7 +131,7 @@ extension HomeVC : UICollectionViewDataSource{
         return cell
         
     }
-        
+    
 }
 
 enum SortType{

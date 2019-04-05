@@ -10,9 +10,10 @@ import Foundation
 
 class Trailer{
     
-    var key : String = ""
-    var name : String = ""
-    var site : String = ""
-    var type : String = ""
+    var key : String?
+    var name : String?
+    var site : String?
+    var size : Int?
+    var type : String?
     
 }

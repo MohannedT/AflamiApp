@@ -12,7 +12,6 @@
 		9EA1D44ABFC4B33D8C7CA1F1 /* Pods_AflamiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F56D9A0FEE38E977BB4ED6E /* Pods_AflamiApp.framework */; };
 		E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */; };
 		E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335B22540BBF00329ADD /* AppDelegate.swift */; };
-		E25C335E22540BBF00329ADD /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335D22540BBF00329ADD /* HomeVC.swift */; };
 		E25C336122540BBF00329ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25C335F22540BBF00329ADD /* Main.storyboard */; };
 		E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25C336222540BBF00329ADD /* AflamiApp.xcdatamodeld */; };
 		E25C336622540BBF00329ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25C336522540BBF00329ADD /* Assets.xcassets */; };
@@ -25,10 +24,12 @@
 		E25C339722540D9A00329ADD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339622540D9A00329ADD /* Review.swift */; };
 		E25C339A22540E1500329ADD /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339922540E1500329ADD /* NetworkLayer.swift */; };
 		E25C339D22540E5500329ADD /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C339C22540E5500329ADD /* DataLayer.swift */; };
-		E25C33A2225410B900329ADD /* DetailedMovieTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */; };
 		E25C33A422541F6C00329ADD /* blank-email-pixels.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E25C33A322541F6C00329ADD /* blank-email-pixels.jpg */; };
-		E25C33A62254252800329ADD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A52254252800329ADD /* HomeCell.swift */; };
-		E25C33A822542D8200329ADD /* UICustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A722542D8200329ADD /* UICustomCollectionViewLayout.swift */; };
+		E25C33A62254252800329ADD /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C33A52254252800329ADD /* HomeCollectionViewCell.swift */; };
+		E2CE88F722577E5A00DB6402 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CE88F622577E5A00DB6402 /* placeholder.png */; };
+		E2CE88F92257D71900DB6402 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CE88F82257D71900DB6402 /* play.png */; };
+		E2CE88FC2258033300DB6402 /* ShowMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE88FB2258033300DB6402 /* ShowMovieCollectionViewCell.swift */; };
+		E2CE88FE2258053000DB6402 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE88FD2258053000DB6402 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,6 @@
 		E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieVC.swift; sourceTree = "<group>"; };
 		E25C335822540BBE00329ADD /* AflamiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AflamiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25C335B22540BBF00329ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E25C335D22540BBF00329ADD /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = ../HomeVC.swift; sourceTree = "<group>"; };
 		E25C336022540BBF00329ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E25C336322540BBF00329ADD /* AflamiApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AflamiApp.xcdatamodel; sourceTree = "<group>"; };
 		E25C336522540BBF00329ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,10 +77,12 @@
 		E25C339622540D9A00329ADD /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		E25C339922540E1500329ADD /* NetworkLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		E25C339C22540E5500329ADD /* DataLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
-		E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedMovieTableVC.swift; sourceTree = "<group>"; };
 		E25C33A322541F6C00329ADD /* blank-email-pixels.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-email-pixels.jpg"; sourceTree = "<group>"; };
-		E25C33A52254252800329ADD /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		E25C33A722542D8200329ADD /* UICustomCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomCollectionViewLayout.swift; sourceTree = "<group>"; };
+		E25C33A52254252800329ADD /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2CE88F622577E5A00DB6402 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		E2CE88F82257D71900DB6402 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		E2CE88FB2258033300DB6402 /* ShowMovieCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		E2CE88FD2258053000DB6402 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EE0BB60B8D49D8341C11A46C /* Pods_AflamiAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AflamiAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE34CB7ED792EAF04C9BD6E /* Pods-AflamiAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AflamiAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-AflamiAppUITests/Pods-AflamiAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,10 +197,9 @@
 		E25C338D22540BF800329ADD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E25C335D22540BBF00329ADD /* HomeVC.swift */,
-				E25C33A1225410B900329ADD /* DetailedMovieTableVC.swift */,
-				E25C33A52254252800329ADD /* HomeCell.swift */,
+				E2CE88FA225802FD00DB6402 /* Home */,
 				E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */,
+				E2CE88FB2258033300DB6402 /* ShowMovieCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,7 +209,6 @@
 			children = (
 				E25C335F22540BBF00329ADD /* Main.storyboard */,
 				E25C336722540BBF00329ADD /* LaunchScreen.storyboard */,
-				E25C33A722542D8200329ADD /* UICustomCollectionViewLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,9 +242,20 @@
 		E25C339E22540E7000329ADD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE88F82257D71900DB6402 /* play.png */,
+				E2CE88F622577E5A00DB6402 /* placeholder.png */,
 				E25C33A322541F6C00329ADD /* blank-email-pixels.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2CE88FA225802FD00DB6402 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2CE88FD2258053000DB6402 /* HomeVC.swift */,
+				E25C33A52254252800329ADD /* HomeCollectionViewCell.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		F331B3516BC261C5266B51BD /* Frameworks */ = {
@@ -374,7 +385,9 @@
 				E25C33A422541F6C00329ADD /* blank-email-pixels.jpg in Resources */,
 				E25C336922540BBF00329ADD /* LaunchScreen.storyboard in Resources */,
 				E25C336622540BBF00329ADD /* Assets.xcassets in Resources */,
+				E2CE88F722577E5A00DB6402 /* placeholder.png in Resources */,
 				E25C336122540BBF00329ADD /* Main.storyboard in Resources */,
+				E2CE88F92257D71900DB6402 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,17 +489,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E25C335E22540BBF00329ADD /* HomeVC.swift in Sources */,
 				E25C339522540D8300329ADD /* Trailer.swift in Sources */,
 				E25C339722540D9A00329ADD /* Review.swift in Sources */,
 				E25C339022540CD400329ADD /* ModelLayer.swift in Sources */,
-				E25C33A2225410B900329ADD /* DetailedMovieTableVC.swift in Sources */,
+				E2CE88FC2258033300DB6402 /* ShowMovieCollectionViewCell.swift in Sources */,
 				E25C339D22540E5500329ADD /* DataLayer.swift in Sources */,
-				E25C33A822542D8200329ADD /* UICustomCollectionViewLayout.swift in Sources */,
 				E25C339A22540E1500329ADD /* NetworkLayer.swift in Sources */,
 				E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */,
 				E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */,
-				E25C33A62254252800329ADD /* HomeCell.swift in Sources */,
+				E25C33A62254252800329ADD /* HomeCollectionViewCell.swift in Sources */,
+				E2CE88FE2258053000DB6402 /* HomeVC.swift in Sources */,
 				E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */,
 				E25C339322540D6500329ADD /* Movie.swift in Sources */,
 			);
