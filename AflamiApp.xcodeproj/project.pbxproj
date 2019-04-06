@@ -31,6 +31,7 @@
 		E288ED0A2259333300ADD2A4 /* user-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED062259333300ADD2A4 /* user-1.png */; };
 		E288ED0B2259333300ADD2A4 /* user-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED072259333300ADD2A4 /* user-2.png */; };
 		E288ED0C2259333300ADD2A4 /* user-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED082259333300ADD2A4 /* user-3.png */; };
+		E288ED0E22596DB100ADD2A4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED0D22596DB100ADD2A4 /* logo.png */; };
 		E2CE88F722577E5A00DB6402 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CE88F622577E5A00DB6402 /* placeholder.png */; };
 		E2CE88F92257D71900DB6402 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CE88F82257D71900DB6402 /* play.png */; };
 		E2CE88FC2258033300DB6402 /* ShowMovieReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CE88FB2258033300DB6402 /* ShowMovieReviewsCell.swift */; };
@@ -95,6 +96,7 @@
 		E288ED062259333300ADD2A4 /* user-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-1.png"; sourceTree = "<group>"; };
 		E288ED072259333300ADD2A4 /* user-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-2.png"; sourceTree = "<group>"; };
 		E288ED082259333300ADD2A4 /* user-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-3.png"; sourceTree = "<group>"; };
+		E288ED0D22596DB100ADD2A4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E2CE88F622577E5A00DB6402 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		E2CE88F82257D71900DB6402 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		E2CE88FB2258033300DB6402 /* ShowMovieReviewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieReviewsCell.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 		E25C339E22540E7000329ADD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E288ED0D22596DB100ADD2A4 /* logo.png */,
 				E288ED052259333300ADD2A4 /* user-0.png */,
 				E288ED062259333300ADD2A4 /* user-1.png */,
 				E288ED072259333300ADD2A4 /* user-2.png */,
@@ -435,6 +438,7 @@
 				E288ED04225929B300ADD2A4 /* like-1.png in Resources */,
 				E25C33A422541F6C00329ADD /* blank-email-pixels.jpg in Resources */,
 				E25C336922540BBF00329ADD /* LaunchScreen.storyboard in Resources */,
+				E288ED0E22596DB100ADD2A4 /* logo.png in Resources */,
 				E25C336622540BBF00329ADD /* Assets.xcassets in Resources */,
 				E288ED03225929B300ADD2A4 /* like-0.png in Resources */,
 				E288ED092259333300ADD2A4 /* user-0.png in Resources */,

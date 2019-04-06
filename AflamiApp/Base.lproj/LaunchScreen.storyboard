@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G22010" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,12 +21,50 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-Gg-fbs">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-6K-5tp">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="pcj-6K-5tp" secondAttribute="height" multiplier="1:1" id="0VF-dC-OYl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AflamiApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdM-wo-mt6">
+                                        <rect key="frame" x="0.0" y="166" width="150" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.14117647707462311" green="0.21960784494876862" blue="0.32549020648002625" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RdM-wo-mt6" secondAttribute="bottom" priority="750" id="0u4-wP-CdY"/>
+                                    <constraint firstItem="pcj-6K-5tp" firstAttribute="leading" secondItem="gEG-Gg-fbs" secondAttribute="leading" id="KdW-PE-rQc"/>
+                                    <constraint firstAttribute="trailing" secondItem="pcj-6K-5tp" secondAttribute="trailing" id="L5x-3h-c7G"/>
+                                    <constraint firstAttribute="width" constant="150" id="Lal-NF-KCh"/>
+                                    <constraint firstItem="pcj-6K-5tp" firstAttribute="top" secondItem="gEG-Gg-fbs" secondAttribute="top" id="M3K-CZ-E8C"/>
+                                    <constraint firstAttribute="height" constant="150" id="RRh-KJ-5RR"/>
+                                    <constraint firstAttribute="trailing" secondItem="RdM-wo-mt6" secondAttribute="trailing" id="WCB-kW-W7U"/>
+                                    <constraint firstItem="RdM-wo-mt6" firstAttribute="top" secondItem="pcj-6K-5tp" secondAttribute="bottom" constant="16" id="p6e-b8-Suv"/>
+                                    <constraint firstItem="RdM-wo-mt6" firstAttribute="leading" secondItem="gEG-Gg-fbs" secondAttribute="leading" id="rpz-z5-Oq8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gEG-Gg-fbs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1bz-OX-DAj"/>
+                            <constraint firstItem="gEG-Gg-fbs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="pKs-d3-3pY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="512" height="512"/>
+    </resources>
 </document>
