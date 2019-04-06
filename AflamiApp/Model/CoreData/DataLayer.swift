@@ -87,7 +87,6 @@ class DataLayer{
     
     
     func getMovieDataById(id : Int) -> Movie {
-        
         let movie : Movie = Movie()
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: DataLayer.MOVIE_ENTITY)
         fetchRequest.predicate = NSPredicate(format: "id == %i", id)
@@ -113,4 +112,41 @@ class DataLayer{
         }
         return movie
     }
+    
+    func isMovieExists(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: DataLayer.MOVIE_ENTITY)
+        fetchRequest.predicate = NSPredicate(format: "id == %i", id)
+        
+        var entitiesCount = 0
+        
+        do {
+            entitiesCount = try managedContext!.count(for: fetchRequest)
+        }
+        catch {
+            print("error executing fetch request: \(error)")
+        }
+        
+        return entitiesCount > 0
+    }
+
+    
+    func deleteMovie(id: Int) -> Bool {
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: DataLayer.MOVIE_ENTITY)
+        fetchRequest.predicate = NSPredicate(format: "id == %i", id)
+        
+        do {
+            let fetchedMovies = try managedContext?.fetch(fetchRequest)
+            for item in fetchedMovies!{
+                managedContext?.delete(item)
+            }
+            try managedContext?.save()
+            
+        } catch let error as NSError {
+            print (error)
+            return false
+        }
+        
+        return true
+    }
+    
 }

@@ -13,6 +13,7 @@ public class Review : NSObject, NSCoding{
     var id : String = ""
     var author : String = ""
     var content : String = ""
+    var image : String = ""
     
     public func encode(with aCoder: NSCoder){
         aCoder.encode(id, forKey: "id")

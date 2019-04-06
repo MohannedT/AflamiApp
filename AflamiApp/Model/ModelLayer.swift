@@ -174,5 +174,14 @@ class ModelLayer{
         return (dataLayer?.getMovieDataById(id: id))!
     }
     
+    // MARK: - Checks if movie aleady exists in coredata
+    func isMovieExistsInCoreData(id : Int) -> Bool {
+        return (dataLayer?.isMovieExists(id: id))!
+    }
+    
+    // MARK: - Delete movie from coredata.. Returns true if succeed
+    func deleteMovieFromCoreData(id : Int) -> Bool {
+        return (dataLayer?.deleteMovie(id: id))!
+    }
     
 }

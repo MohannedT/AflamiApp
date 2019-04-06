@@ -30,8 +30,7 @@ class ShowMovieVC: UIViewController {
     let TRAILERS_CELL_ID : String = "trailersCell"
     let REVIEWS_CELL_ID : String = "reviewsCell"
     let CORNER_RADIUS : CGFloat = 10
-    var addToFavouriteButton : UIBarButtonItem?
-    var removeFromFavouriteButton : UIBarButtonItem?
+    var favButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,26 +50,37 @@ class ShowMovieVC: UIViewController {
         
         imagePosterImage.layer.cornerRadius = CORNER_RADIUS
         imagePosterImage.layer.masksToBounds = true
-//
-//
-//        // Adding favourite button
-//        addToFavouriteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(self.addToFavouriteTapped))
-//        removeFromFavouriteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem., target: self, action: #selector(self.addToFavouriteTapped))
-//        
-//        if modelLayer.getMovieDataById(id: (movie?.id)!).reviews.count < 0{
-//            self.navigationItem.setRightBarButtonItems([addToFavouriteButton!], animated: true)
-//        } else {
-//            self.navigationItem.setRightBarButtonItems([removeFromFavouriteButton!], animated: true)
-//        }
-//        
+
+        //create a favourite button
+        favButton = UIButton(type: UIButtonType.custom)
+        favButton?.setImage(UIImage(named: "like-0.png"), for: UIControlState.normal)
+        favButton?.addTarget(self, action: #selector(ShowMovieVC.favouriteButtonTapped), for: UIControlEvents.touchUpInside)
+        favButton?.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
+        //assign button to navigationbar
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favButton!)
+        
+        changeFavIconColor()
         
     }
     
-    func addToFavouriteTapped(){
-        if modelLayer.insertMovieToCoreData(movie: self.movie!){
-            
-            print("addToFavouriteSucceed!")
+    func favouriteButtonTapped(){
+        if (modelLayer.isMovieExistsInCoreData(id: (movie?.id)!)){ // Movie exist in database
+            if modelLayer.deleteMovieFromCoreData(id: (movie?.id)!) {
+                changeFavIconColor()
+            }
+        } else {
+            if modelLayer.insertMovieToCoreData(movie: self.movie!){
+                changeFavIconColor()
+            }
+        }
+    }
+    
+    func changeFavIconColor(){
+        if (modelLayer.isMovieExistsInCoreData(id: (movie?.id)!)){ // Movie exist in database
+            favButton?.setImage(UIImage(named: "like-1.png"), for: UIControlState.normal)
+        } else { // Movie doesn't exist in database
+            favButton?.setImage(UIImage(named: "like-0.png"), for: UIControlState.normal)
         }
     }
     
@@ -104,6 +114,10 @@ class ShowMovieVC: UIViewController {
         } else {
             modelLayer.getReviews(movieId: (movie?.id)!) { (reviews, error) in
                 self.movie?.reviews = reviews ?? []
+                // Set reviews image
+                for item in (self.movie?.reviews)!{
+                    item.image = "user-\(String(arc4random_uniform(4)))"
+                }
                 self.reviewsCollectionView.reloadData()
             }
         }
@@ -173,6 +187,7 @@ extension ShowMovieVC : UICollectionViewDataSource, UICollectionViewDelegate{
         
         cell.author.text = movie?.reviews[indexPath.row].author ?? ""
         cell.content.text = movie?.reviews[indexPath.row].content ?? ""
+        cell.image.image = UIImage(named: (movie?.reviews[indexPath.row].image)!)
         
         return cell
     }

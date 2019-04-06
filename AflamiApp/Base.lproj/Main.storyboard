@@ -89,7 +89,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-Hk-OXO">
-                                                    <rect key="frame" x="42.5" y="214" width="95.5" height="21"/>
+                                                    <rect key="frame" x="42.5" y="213" width="95.5" height="21"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -172,7 +172,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mHw-Ba-gIm">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="610"/>
                                 <color key="backgroundColor" red="0.1215686277" green="0.1215686277" blue="0.1215686277" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dzl-aG-Fpq">
@@ -232,10 +232,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mHw-Ba-gIm" firstAttribute="top" secondItem="T9R-4U-hC3" secondAttribute="bottom" id="0gD-mp-TNx"/>
+                            <constraint firstItem="RkG-we-SSp" firstAttribute="top" secondItem="mHw-Ba-gIm" secondAttribute="bottom" id="IhE-Ff-etO"/>
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="width" secondItem="hl1-Hx-ex9" secondAttribute="width" id="TaT-AC-ZZ4"/>
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="centerX" secondItem="hl1-Hx-ex9" secondAttribute="centerX" id="lTF-a3-MWN"/>
-                            <constraint firstItem="RkG-we-SSp" firstAttribute="top" secondItem="mHw-Ba-gIm" secondAttribute="bottom" id="po7-p4-Cc5"/>
+                            <constraint firstItem="mHw-Ba-gIm" firstAttribute="top" secondItem="T9R-4U-hC3" secondAttribute="bottom" constant="-56" id="pXn-Ba-spO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Favourite" id="akB-E6-l6C">
@@ -343,7 +343,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="186" height="85"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8z-7p-zJQ" id="zp9-Jt-XZ2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="84"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHJ-ih-cXd">
@@ -414,7 +414,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="290"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8g-Jv-3fH">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="E8g-Jv-3fH">
                                                                     <rect key="frame" x="8" y="8" width="35" height="35"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="35" id="Wh9-fQ-7Qs"/>
@@ -580,7 +580,7 @@
     </scenes>
     <resources>
         <image name="placeholder.png" width="1280" height="960"/>
-        <image name="user.png" width="256" height="256"/>
+        <image name="user-1.png" width="128" height="128"/>
         <image name="youtube.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
