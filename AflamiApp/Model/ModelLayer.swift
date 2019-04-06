@@ -22,7 +22,7 @@ class ModelLayer{
         case .Popularity:
             url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=\(apiKey)"
         case .TopRated:
-            url = "https://api.themoviedb.org/3/discover/movie?sort_by=top_rated&api_key=\(apiKey)"
+            url = "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&api_key=\(apiKey)"
         }
         
         networkLayer.executeNetwordRequest(url: url!) { (value, error) in

@@ -19,5 +19,6 @@ target 'AflamiApp' do
 
   pod 'Alamofire', '~> 4.0'
   pod 'AlamofireImage', '~> 3.0’
+  pod 'Cosmos', git: 'https://github.com/marketplacer/Cosmos.git', tag: '8.0.2'
 
 end

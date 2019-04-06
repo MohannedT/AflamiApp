@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AflamiApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>29F1DCC35269F79FA0E8F1829F14C06C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3383968E74B5371B20BB519B170DC7FD</key>
 		<dict>
 			<key>primary</key>
@@ -47,12 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AF0370AAF034BBD44060B90AAA8FD1CE</key>
+		<key>64A5B0D84D8579CF3E24DF2C12D99B08</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E5FAE20182F5E7C7A6FC0DEF52D3A742</key>
+		<key>AF0370AAF034BBD44060B90AAA8FD1CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

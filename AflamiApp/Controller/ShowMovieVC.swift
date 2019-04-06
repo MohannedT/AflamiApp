@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class ShowMovieVC: UIViewController {
     
@@ -20,6 +21,7 @@ class ShowMovieVC: UIViewController {
     @IBOutlet weak var imagePosterImage: UIImageView!
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var trailersTableView: UITableView!
+    @IBOutlet weak var rateView: CosmosView!
     
     // MARK: - Data
     let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
@@ -60,6 +62,12 @@ class ShowMovieVC: UIViewController {
         //assign button to navigationbar
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: favButton!)
         
+        // Change the cosmos view rating
+        rateView.rating = (movie?.voteAverage)!/2
+        
+        // Change the text
+        rateView.text = "\((movie?.voteAverage)!)"
+        
         changeFavIconColor()
         
     }
@@ -90,17 +98,15 @@ class ShowMovieVC: UIViewController {
         if (OFFLINE_MODE){
             self.movie = modelLayer.getMovieDataById(id: (movie?.id)!)
         }
-        labelReleaseDate.text = movie?.releaseDate
-        labelOriginalLanguage.text = movie?.originalLanguage
+        labelReleaseDate.text = "  \((movie?.releaseDate) ?? "")  "
+        labelOriginalLanguage.text = "  \((movie?.originalLanguage) ?? "")  "
         labelOverview.text = movie?.overview
         labelTitle.text = movie?.title
         imagePosterImage.image = UIImage(data: (movie?.image)!)
     }
     
     func getTrailers(){
-        if (OFFLINE_MODE){
-            
-        } else {
+        if (!OFFLINE_MODE || movie?.trailers.count == 0){
             modelLayer.getTrailers(movieId: (movie?.id)!) { (trailers, error) in
                 self.movie?.trailers = trailers ?? []
                 self.trailersTableView.reloadData()
@@ -109,9 +115,7 @@ class ShowMovieVC: UIViewController {
     }
     
     func getReviews(){
-        if (OFFLINE_MODE){
-            
-        } else {
+        if (!OFFLINE_MODE || movie?.reviews.count == 0){
             modelLayer.getReviews(movieId: (movie?.id)!) { (reviews, error) in
                 self.movie?.reviews = reviews ?? []
                 // Set reviews image
@@ -187,7 +191,8 @@ extension ShowMovieVC : UICollectionViewDataSource, UICollectionViewDelegate{
         
         cell.author.text = movie?.reviews[indexPath.row].author ?? ""
         cell.content.text = movie?.reviews[indexPath.row].content ?? ""
-        cell.image.image = UIImage(named: (movie?.reviews[indexPath.row].image)!)
+        let imageName = (movie?.reviews[indexPath.row].image)!
+        cell.image.image = UIImage(named: (!imageName.isEmpty) ? imageName : "user-1.png")
         
         return cell
     }

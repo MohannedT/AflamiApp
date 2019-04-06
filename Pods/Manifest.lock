@@ -2,20 +2,33 @@ PODS:
   - Alamofire (4.8.2)
   - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
+  - Cosmos (8.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage (~> 3.0)
+  - Cosmos (from `https://github.com/marketplacer/Cosmos.git`, tag `8.0.2`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
 
+EXTERNAL SOURCES:
+  Cosmos:
+    :git: https://github.com/marketplacer/Cosmos.git
+    :tag: 8.0.2
+
+CHECKOUT OPTIONS:
+  Cosmos:
+    :git: https://github.com/marketplacer/Cosmos.git
+    :tag: 8.0.2
+
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  Cosmos: 83d7e1c5289839a954dfa45376a11e9a9cef0a13
 
-PODFILE CHECKSUM: eb0529fbd3a2456050f74f3b6e269b561ec68f57
+PODFILE CHECKSUM: f3dc2533ab890f2b74f2fa3ecaf003620f215ecb
 
 COCOAPODS: 1.6.1
