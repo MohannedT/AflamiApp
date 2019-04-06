@@ -5,8 +5,13 @@ class ModelLayer{
     
     let apiKey = "e91d155831d8f6a5c7089243d189285b"
     let networkLayer : NetworkLayer = NetworkLayer()
+    let dataLayer : DataLayer?
+    var appDelegate : AppDelegate?
     
-    
+    init(appDelegate : AppDelegate) {
+        dataLayer = DataLayer(appDelegate: appDelegate)
+    }
+        
     //MARK: - Get all movies
     func getMoviesList (sortType : SortType, completionHandler : @escaping (Array<Movie>?, Error?) -> Void){
         turnNetwokIndicatorOn()
@@ -123,7 +128,6 @@ class ModelLayer{
                     review.content = item["content"] as? String ?? ""
                     
                     reviewslist.append(review)
-                    print("\(review.id)  \(review.author)  \(review.content)")
                 }
                 
                 self.turnNetwokIndicatorOff()
@@ -154,4 +158,21 @@ class ModelLayer{
     func turnNetwokIndicatorOff(){
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
+    
+    // MARK: - insertMovieToCoreData
+    func insertMovieToCoreData(movie: Movie) -> Bool{
+        return (dataLayer?.insertMovie(movie: movie))!
+    }
+    
+    // MARK: - getMoviesListFromCoreData
+    func getMoviesListFromCoreData(listType : ListType)-> Array<Movie>{
+        return (dataLayer?.getAllMovies(listType: listType))!
+    }
+    
+    // MARK: - Get movie data using movie id
+    func getMovieDataById(id : Int) -> Movie{
+        return (dataLayer?.getMovieDataById(id: id))!
+    }
+    
+    
 }

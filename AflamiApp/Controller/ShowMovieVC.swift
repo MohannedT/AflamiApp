@@ -9,6 +9,8 @@
 import UIKit
 
 class ShowMovieVC: UIViewController {
+    
+//    let managedContext = appDelegate?.persistentContainer.viewContext
 
     // MARK: - Outlets
     @IBOutlet weak var labelReleaseDate: UILabel!
@@ -20,13 +22,16 @@ class ShowMovieVC: UIViewController {
     @IBOutlet weak var trailersTableView: UITableView!
     
     // MARK: - Data
-    let modelLayer : ModelLayer = ModelLayer()
+    let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
     var movie : Movie?
     
     // MARK: - Constants
+    var OFFLINE_MODE = false
     let TRAILERS_CELL_ID : String = "trailersCell"
     let REVIEWS_CELL_ID : String = "reviewsCell"
     let CORNER_RADIUS : CGFloat = 10
+    var addToFavouriteButton : UIBarButtonItem?
+    var removeFromFavouriteButton : UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,24 +51,35 @@ class ShowMovieVC: UIViewController {
         
         imagePosterImage.layer.cornerRadius = CORNER_RADIUS
         imagePosterImage.layer.masksToBounds = true
-
-
-        // Adding favourite button
-        let addToFavouriteButton : UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(self.addToFavouriteTapped))
-        
-        self.navigationItem.setRightBarButtonItems([addToFavouriteButton], animated: true)
+//
+//
+//        // Adding favourite button
+//        addToFavouriteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(self.addToFavouriteTapped))
+//        removeFromFavouriteButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem., target: self, action: #selector(self.addToFavouriteTapped))
+//        
+//        if modelLayer.getMovieDataById(id: (movie?.id)!).reviews.count < 0{
+//            self.navigationItem.setRightBarButtonItems([addToFavouriteButton!], animated: true)
+//        } else {
+//            self.navigationItem.setRightBarButtonItems([removeFromFavouriteButton!], animated: true)
+//        }
+//        
         
         
     }
     
     func addToFavouriteTapped(){
-        print("addToFavouriteTapped")
+        if modelLayer.insertMovieToCoreData(movie: self.movie!){
+            
+            print("addToFavouriteSucceed!")
+        }
     }
     
 
     // MARK: - Fill UI items with movie data
     func fillMovieData(){
-        print(movie?.overview ?? "")
+        if (OFFLINE_MODE){
+            self.movie = modelLayer.getMovieDataById(id: (movie?.id)!)
+        }
         labelReleaseDate.text = movie?.releaseDate
         labelOriginalLanguage.text = movie?.originalLanguage
         labelOverview.text = movie?.overview
@@ -72,16 +88,24 @@ class ShowMovieVC: UIViewController {
     }
     
     func getTrailers(){
-        modelLayer.getTrailers(movieId: (movie?.id)!) { (trailers, error) in
-            self.movie?.trailers = trailers ?? []
-            self.trailersTableView.reloadData()
+        if (OFFLINE_MODE){
+            
+        } else {
+            modelLayer.getTrailers(movieId: (movie?.id)!) { (trailers, error) in
+                self.movie?.trailers = trailers ?? []
+                self.trailersTableView.reloadData()
+            }
         }
     }
     
     func getReviews(){
-        modelLayer.getReviews(movieId: (movie?.id)!) { (reviews, error) in
-            self.movie?.reviews = reviews ?? []
-            self.reviewsCollectionView.reloadData()
+        if (OFFLINE_MODE){
+            
+        } else {
+            modelLayer.getReviews(movieId: (movie?.id)!) { (reviews, error) in
+                self.movie?.reviews = reviews ?? []
+                self.reviewsCollectionView.reloadData()
+            }
         }
     }
 

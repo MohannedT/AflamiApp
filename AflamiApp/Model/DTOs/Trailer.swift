@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Trailer{
+public class Trailer : NSObject, NSCoding{
     
     var key : String?
     var name : String?
@@ -16,4 +16,23 @@ class Trailer{
     var size : Int?
     var type : String?
     
+    public func encode(with aCoder: NSCoder){
+        aCoder.encode(key, forKey: "key")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(site, forKey: "site")
+        aCoder.encode(size, forKey: "size")
+        aCoder.encode(type, forKey: "type")
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        key = aDecoder.decodeObject(forKey: "key") as? String ?? ""
+        name = aDecoder.decodeObject(forKey: "name") as? String ?? ""
+        site = aDecoder.decodeObject(forKey: "site") as? String ?? ""
+        size = aDecoder.decodeObject(forKey: "size") as? Int ?? 0
+        type = aDecoder.decodeObject(forKey: "type") as? String ?? ""
+    }
+    
+    override init() {
+        super.init()
+    }
 }

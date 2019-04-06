@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Data
-    let modelLayer : ModelLayer = ModelLayer()
+    let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
     var moviesList : Array<Movie> = []
     
     // MARK: - Constants
@@ -26,7 +26,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         getMoviesListBySortType(sortType: .Popularity)
         
     }
@@ -92,7 +92,7 @@ class HomeVC: UIViewController {
 }
 
 
-// MARK: - Data Source
+// MARK: - Collection view
 extension HomeVC : UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -123,6 +123,7 @@ extension HomeVC : UICollectionViewDataSource{
         if let image = moviesList[indexPath.row].image {
             cell.imageView?.image = UIImage(data: image)
         } else {
+            cell.imageView.image = UIImage(named: "placeholder.png")
             self.modelLayer.getMovieThumbnail(movie: (moviesList[indexPath.row]), completionHandler: { (image) in
                 cell.imageView?.image = image
             })

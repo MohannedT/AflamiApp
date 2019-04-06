@@ -1,14 +1,14 @@
 //
-//  Movie.swift
-//  aflami
+//  File.swift
+//  AflamiApp
 //
-//  Created by Ahmed M. Hassan on 7/22/1440 AH.
-//  Copyright © 1440 AH jets. All rights reserved.
+//  Created by Ahmed M. Hassan on 4/6/19.
+//  Copyright © 2019 Ahmed M. Hassan. All rights reserved.
 //
 
 import Foundation
 
-class Movie{
+public class Movie{
     
     var id : Int = 0
     var voteAverage : Double = 0.0
