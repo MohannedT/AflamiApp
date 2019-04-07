@@ -13,12 +13,12 @@ class FavouriteVC: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // MARK: - Data
+    // MARK: - Constants
     let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
     var moviesList : Array<Movie> = []
+    var sortType = SortType.Popularity
     
     // MARK: - Constants
-    var sortType = SortType.Popularity
     let CORNER_RADIUS : CGFloat = 10
     let CELL_IDENTIFIER : String = "favCell"
     let DETAILS_VIEW_ID : String = "showMovie"
@@ -47,6 +47,11 @@ class FavouriteVC: UIViewController {
         default:
             print("")
         }
+    }
+    
+    // MARK: - Swipe right to Home
+    @IBAction func didSwipeRight(_ sender: UISwipeGestureRecognizer) {
+        self.tabBarController?.selectedIndex = 0
     }
 
 }

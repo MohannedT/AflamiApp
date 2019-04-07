@@ -14,12 +14,12 @@ class HomeVC: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    // MARK: - Data
+    // MARK: - Properties
     let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
     var moviesList : Array<Movie> = []
+    var sortType = SortType.Popularity
     
     // MARK: - Constants
-    var sortType = SortType.Popularity
     let CORNER_RADIUS : CGFloat = 10
     let CELL_IDENTIFIER : String = "homeCell"
     let DETAILS_VIEW_ID : String = "showMovie"
@@ -28,7 +28,6 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
                 
         fillMoviesList(sortType: .Popularity)
-        
     }
     
     // MARK: - Get movies list
@@ -61,13 +60,13 @@ class HomeVC: UIViewController {
         
         let actionSheet = UIAlertController.init(title: "Choose prefered sorting type", message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction.init(title: "Popularity", style: UIAlertActionStyle.default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction.init(title: "Popularity\((sortType == .Popularity ? " (Selected)" : ""))", style: UIAlertActionStyle.default, handler: { (action) in
             if self.sortType != .Popularity{
                 self.changeSortType(newSortType: .Popularity)
             }
         }))
         
-        actionSheet.addAction(UIAlertAction.init(title: "Top Rated", style: UIAlertActionStyle.default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction.init(title: "Top Rated\((sortType == .TopRated ? " (Selected)" : ""))", style: UIAlertActionStyle.default, handler: { (action) in
             if self.sortType != .TopRated{
                 self.changeSortType(newSortType: .TopRated)
             }
@@ -94,6 +93,11 @@ class HomeVC: UIViewController {
         default:
             print("")
         }
+    }
+    
+    // MARK: - Swipe left to Favorites
+    @IBAction func didSwipeLeft(_ sender: UISwipeGestureRecognizer) {
+        self.tabBarController?.selectedIndex = 1
     }
 }
 
@@ -151,9 +155,3 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
 }
-
-enum SortType{
-    case Popularity
-    case TopRated
-}
-

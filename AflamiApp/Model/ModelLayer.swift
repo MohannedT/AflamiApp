@@ -4,6 +4,7 @@ import UIKit
 class ModelLayer{
     
     let apiKey = "e91d155831d8f6a5c7089243d189285b"
+    let baseUrl = "https://api.themoviedb.org"
     let networkLayer : NetworkLayer = NetworkLayer()
     let dataLayer : DataLayer?
     var appDelegate : AppDelegate?
@@ -16,29 +17,22 @@ class ModelLayer{
     //MARK: - Get all movies
     func getMoviesList (sortType : SortType, completionHandler : @escaping (Array<Movie>?, Error?) -> Void){
         turnNetwokIndicatorOn()
-        var movieslist : Array<Movie> = []
-        var url : String?
+        let url = "\(baseUrl)/3/discover/movie?sort_by=\(sortType.rawValue).desc&page=\(pageNumber)&api_key=\(apiKey)"
         
-        switch sortType{
-        case .Popularity:
-            url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=\(pageNumber)&api_key=\(apiKey)"
-        case .TopRated:
-            url = "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&page=\(pageNumber)&api_key=\(apiKey)"
-        }
-        
-        networkLayer.executeNetwordRequest(url: url!) { (value, error) in
+        networkLayer.executeNetwordRequest(url: url) { (value, error) in
             if let result = value {
-                let moviesArray = result["results"] as! Array<[String : Any]>
+                var movieslist : Array<Movie> = []
+                let moviesArray = result[APIMovie.results.rawValue] as! Array<[String : Any]>
                 for item in moviesArray{
                     
                     let movie = Movie()
-                    movie.id = item["id"] as? Int ?? 0
-                    movie.posterPath = item["poster_path"] as? String ?? ""
-                    movie.releaseDate = item["release_date"] as? String ?? ""
-                    movie.title = item["original_title"] as? String ?? ""
-                    movie.voteAverage = item["vote_average"] as? Double ?? 0
-                    movie.originalLanguage = item["original_language"] as? String ?? ""
-                    movie.overview = item["overview"] as? String ?? ""
+                    movie.id = item[APIMovie.id.rawValue] as? Int ?? 0
+                    movie.posterPath = item[APIMovie.posterPath.rawValue] as? String ?? ""
+                    movie.releaseDate = item[APIMovie.releaseDate.rawValue] as? String ?? ""
+                    movie.title = item[APIMovie.title.rawValue] as? String ?? ""
+                    movie.voteAverage = item[APIMovie.voteAverage.rawValue] as? Double ?? 0
+                    movie.originalLanguage = item[APIMovie.originalLanguage.rawValue] as? String ?? ""
+                    movie.overview = item[APIMovie.overview.rawValue] as? String ?? ""
                     
                     movieslist.append(movie)
                 }
@@ -82,19 +76,19 @@ class ModelLayer{
         
         self.turnNetwokIndicatorOn()
         var trailerslist : Array<Trailer> = []
-        let url : String = "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=\(apiKey)"
+        let url : String = "\(baseUrl)/3/movie/\(movieId)/videos?api_key=\(apiKey)"
         
         networkLayer.executeNetwordRequest(url: url) { (value, error) in
             if let result = value {
-                let trailersArray = result["results"] as! Array<[String : Any]>
+                let trailersArray = result[APIMovie.results.rawValue] as! Array<[String : Any]>
                 for item in trailersArray{
                     
                     let trailer = Trailer()
-                    trailer.key = item["key"] as? String ?? ""
-                    trailer.name = item["name"] as? String ?? ""
-                    trailer.site = item["site"] as? String ?? ""
-                    trailer.size = item["size"] as? Int ?? 0
-                    trailer.type = item["type"] as? String ?? ""
+                    trailer.key = item[APITrailer.key.rawValue] as? String ?? ""
+                    trailer.name = item[APITrailer.name.rawValue] as? String ?? ""
+                    trailer.site = item[APITrailer.site.rawValue] as? String ?? ""
+                    trailer.size = item[APITrailer.size.rawValue] as? Int ?? 0
+                    trailer.type = item[APITrailer.type.rawValue] as? String ?? ""
                     
                     trailerslist.append(trailer)
                 }
@@ -117,7 +111,7 @@ class ModelLayer{
         
         self.turnNetwokIndicatorOn()
         var reviewslist : Array<Review> = []
-        let url : String = "https://api.themoviedb.org/3/movie/\(movieId)/reviews?api_key=\(apiKey)"
+        let url : String = "\(baseUrl)/3/movie/\(movieId)/reviews?api_key=\(apiKey)"
         
         networkLayer.executeNetwordRequest(url: url) { (value, error) in
             if let result = value {
@@ -125,9 +119,9 @@ class ModelLayer{
                 for item in reviewsArray{
                     
                     let review = Review()
-                    review.id = item["id"] as? String ?? ""
-                    review.author = item["author"] as? String ?? ""
-                    review.content = item["content"] as? String ?? ""
+                    review.id = item[APIReview.id.rawValue] as? String ?? ""
+                    review.author = item[APIReview.author.rawValue] as? String ?? ""
+                    review.content = item[APIReview.content.rawValue] as? String ?? ""
                     
                     reviewslist.append(review)
                 }

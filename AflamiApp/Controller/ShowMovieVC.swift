@@ -11,8 +11,6 @@ import Cosmos
 
 class ShowMovieVC: UIViewController {
     
-//    let managedContext = appDelegate?.persistentContainer.viewContext
-
     // MARK: - Outlets
     @IBOutlet weak var labelReleaseDate: UILabel!
     @IBOutlet weak var labelOriginalLanguage: UILabel!
@@ -22,8 +20,9 @@ class ShowMovieVC: UIViewController {
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var trailersTableView: UITableView!
     @IBOutlet weak var rateView: CosmosView!
+    var favButton: UIButton?
     
-    // MARK: - Data
+    // MARK: - Properties
     let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
     var movie : Movie?
     
@@ -32,7 +31,6 @@ class ShowMovieVC: UIViewController {
     let TRAILERS_CELL_ID : String = "trailersCell"
     let REVIEWS_CELL_ID : String = "reviewsCell"
     let CORNER_RADIUS : CGFloat = 10
-    var favButton: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -130,6 +130,7 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="v11-VO-qlN" secondAttribute="trailing" id="2ee-Ro-IoI"/>
                             <constraint firstItem="izG-4j-tOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MGm-Gs-5p0"/>
@@ -140,6 +141,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="izG-4j-tOJ" secondAttribute="trailing" constant="16" id="vuF-ND-job"/>
                             <constraint firstItem="v11-VO-qlN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wUj-rb-G0u"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2y5-Ut-tM2" appends="YES" id="NlF-si-EOl"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="VXk-gD-oiz">
                         <barButtonItem key="backBarButtonItem" title="Home" id="2kf-In-FQn"/>
@@ -156,6 +160,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="2y5-Ut-tM2">
+                    <connections>
+                        <action selector="didSwipeLeft:" destination="BYZ-38-t0r" id="C0L-Xg-QbP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-943" y="-135"/>
         </scene>
@@ -197,6 +206,9 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8I-S3-gQQ">
                                                     <rect key="frame" x="97" y="51" width="260" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="zHy-H2-28P"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -210,7 +222,7 @@
                                             <constraint firstAttribute="bottomMargin" secondItem="UaF-sg-p94" secondAttribute="bottom" id="RKV-mG-gyr"/>
                                             <constraint firstItem="UaF-sg-p94" firstAttribute="leading" secondItem="kJa-W9-aF5" secondAttribute="leadingMargin" id="ehK-ua-ePo"/>
                                             <constraint firstItem="UaF-sg-p94" firstAttribute="top" secondItem="kJa-W9-aF5" secondAttribute="topMargin" id="lEb-FL-p0M"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="i8I-S3-gQQ" secondAttribute="trailing" id="puY-Rh-pDq"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="i8I-S3-gQQ" secondAttribute="trailing" priority="750" id="puY-Rh-pDq"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -231,12 +243,16 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="RkG-we-SSp" firstAttribute="top" secondItem="mHw-Ba-gIm" secondAttribute="bottom" id="IhE-Ff-etO"/>
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="width" secondItem="hl1-Hx-ex9" secondAttribute="width" id="TaT-AC-ZZ4"/>
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="centerX" secondItem="hl1-Hx-ex9" secondAttribute="centerX" id="lTF-a3-MWN"/>
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="top" secondItem="T9R-4U-hC3" secondAttribute="bottom" constant="-56" id="pXn-Ba-spO"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="7ez-C8-3GJ" appends="YES" id="PLl-yi-mxQ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Favorites" id="akB-E6-l6C">
                         <barButtonItem key="backBarButtonItem" title="Favorites" id="bOa-33-wA8"/>
@@ -246,6 +262,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o75-C3-J51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="7ez-C8-3GJ">
+                    <connections>
+                        <action selector="didSwipeRight:" destination="M0f-Dz-aen" id="6pP-S0-KbX"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-943.20000000000005" y="732.68365817091455"/>
         </scene>
@@ -637,6 +658,6 @@
         <image name="youtube.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jx5-qF-366"/>
+        <segue reference="seU-rh-x9m"/>
     </inferredMetricsTieBreakers>
 </document>
