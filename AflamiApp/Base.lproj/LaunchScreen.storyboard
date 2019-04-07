@@ -23,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gEG-Gg-fbs">
-                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                                <rect key="frame" x="112" y="235.5" width="150" height="195"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-6K-5tp">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-large.png" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-6K-5tp">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="pcj-6K-5tp" secondAttribute="height" multiplier="1:1" id="0VF-dC-OYl"/>
@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="trailing" secondItem="pcj-6K-5tp" secondAttribute="trailing" id="L5x-3h-c7G"/>
                                     <constraint firstAttribute="width" constant="150" id="Lal-NF-KCh"/>
                                     <constraint firstItem="pcj-6K-5tp" firstAttribute="top" secondItem="gEG-Gg-fbs" secondAttribute="top" id="M3K-CZ-E8C"/>
-                                    <constraint firstAttribute="height" constant="150" id="RRh-KJ-5RR"/>
+                                    <constraint firstAttribute="height" constant="195" id="RRh-KJ-5RR"/>
                                     <constraint firstAttribute="trailing" secondItem="RdM-wo-mt6" secondAttribute="trailing" id="WCB-kW-W7U"/>
                                     <constraint firstItem="RdM-wo-mt6" firstAttribute="top" secondItem="pcj-6K-5tp" secondAttribute="bottom" constant="16" id="p6e-b8-Suv"/>
                                     <constraint firstItem="RdM-wo-mt6" firstAttribute="leading" secondItem="gEG-Gg-fbs" secondAttribute="leading" id="rpz-z5-Oq8"/>
@@ -65,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo.png" width="512" height="512"/>
+        <image name="icon-large.png" width="512" height="512"/>
     </resources>
 </document>

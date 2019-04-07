@@ -7,6 +7,7 @@ class ModelLayer{
     let networkLayer : NetworkLayer = NetworkLayer()
     let dataLayer : DataLayer?
     var appDelegate : AppDelegate?
+    var pageNumber : Int = 1
     
     init(appDelegate : AppDelegate) {
         dataLayer = DataLayer(appDelegate: appDelegate)
@@ -20,9 +21,9 @@ class ModelLayer{
         
         switch sortType{
         case .Popularity:
-            url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=\(apiKey)"
+            url = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=\(pageNumber)&api_key=\(apiKey)"
         case .TopRated:
-            url = "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&api_key=\(apiKey)"
+            url = "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&page=\(pageNumber)&api_key=\(apiKey)"
         }
         
         networkLayer.executeNetwordRequest(url: url!) { (value, error) in
@@ -42,6 +43,7 @@ class ModelLayer{
                     movieslist.append(movie)
                 }
                 
+                self.pageNumber = self.pageNumber + 1
                 self.turnNetwokIndicatorOff()
                 completionHandler(movieslist, nil)
                 
@@ -184,4 +186,8 @@ class ModelLayer{
         return (dataLayer?.deleteMovie(id: id))!
     }
     
+    // MARK: - Reset page number to 1 in case of changed sorting type
+    func resetPageNumber(){
+        self.pageNumber = 1
+    }
 }

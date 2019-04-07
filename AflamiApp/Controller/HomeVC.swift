@@ -27,23 +27,33 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        getMoviesListBySortType(sortType: .Popularity)
+        fillMoviesList(sortType: .Popularity)
         
     }
     
     // MARK: - Get movies list
-    func getMoviesListBySortType(sortType : SortType){
+    func fillMoviesList(sortType : SortType){
         self.modelLayer.getMoviesList(sortType: sortType, completionHandler: { (value, error) in
             if let result = value {
                 DispatchQueue.main.async {
-                    self.moviesList = result
+                    for item in result{
+                        self.moviesList.append(item)
+                    }
                     self.collectionView.reloadData()
+                    self.sortType = sortType
                 }
                 
             } else {
                 print("Connection Error!")
             }
         })
+    }
+    
+    func changeSortType(newSortType : SortType){
+        self.moviesList.removeAll()
+        modelLayer.resetPageNumber()
+        collectionView.reloadData()
+        fillMoviesList(sortType: newSortType)
     }
     
     // MARK: - Change sort type of movies by popularity or top rated
@@ -53,17 +63,13 @@ class HomeVC: UIViewController {
         
         actionSheet.addAction(UIAlertAction.init(title: "Popularity", style: UIAlertActionStyle.default, handler: { (action) in
             if self.sortType != .Popularity{
-                self.getMoviesListBySortType(sortType: .Popularity)
-                print("popularity")
-                self.sortType = .Popularity
+                self.changeSortType(newSortType: .Popularity)
             }
         }))
         
         actionSheet.addAction(UIAlertAction.init(title: "Top Rated", style: UIAlertActionStyle.default, handler: { (action) in
             if self.sortType != .TopRated{
-                self.getMoviesListBySortType(sortType: .TopRated)
-                print("Top Rated")
-                self.sortType = .TopRated
+                self.changeSortType(newSortType: .TopRated)
             }
         }))
         
@@ -93,7 +99,7 @@ class HomeVC: UIViewController {
 
 
 // MARK: - Collection view
-extension HomeVC : UICollectionViewDataSource{
+extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -104,6 +110,17 @@ extension HomeVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return moviesList.count
+        
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+                
+        // Fetch new items to the array
+        if indexPath.row == (moviesList.count - 1) {
+            fillMoviesList(sortType: sortType)
+            print("Get new movies")
+        }
         
     }
     

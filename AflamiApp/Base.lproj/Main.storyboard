@@ -159,7 +159,7 @@
             </objects>
             <point key="canvasLocation" x="-943" y="-135"/>
         </scene>
-        <!--Favourite-->
+        <!--Favorites-->
         <scene sceneID="cyn-KV-fa3">
             <objects>
                 <viewController id="M0f-Dz-aen" customClass="FavouriteVC" customModule="AflamiApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,8 +238,8 @@
                             <constraint firstItem="mHw-Ba-gIm" firstAttribute="top" secondItem="T9R-4U-hC3" secondAttribute="bottom" constant="-56" id="pXn-Ba-spO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favourite" id="akB-E6-l6C">
-                        <barButtonItem key="backBarButtonItem" title="Favourite" id="bOa-33-wA8"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="akB-E6-l6C">
+                        <barButtonItem key="backBarButtonItem" title="Favorites" id="bOa-33-wA8"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="mHw-Ba-gIm" id="bGG-pC-rLt"/>
@@ -321,7 +321,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSY-EF-18Z">
                                                         <rect key="frame" x="8" y="4.5" width="35" height="17"/>
-                                                        <color key="backgroundColor" red="1" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -333,7 +333,7 @@
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPO-3y-AZF">
                                                         <rect key="frame" x="59" y="4.5" width="19.5" height="17"/>
-                                                        <color key="backgroundColor" red="1" green="0.74509803919999995" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                         <color key="textColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -368,7 +368,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="186" height="85"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8z-7p-zJQ" id="zp9-Jt-XZ2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="84"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHJ-ih-cXd">
@@ -448,6 +448,7 @@
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djA-wE-34W">
                                                                     <rect key="frame" x="59" y="8" width="233" height="35"/>
+                                                                    <color key="tintColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.14117647058823529" green="0.2196078431372549" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -581,10 +582,10 @@
         <scene sceneID="tu5-IF-LAA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HYI-8d-Vgf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="KP7-Xf-DjL"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="KP7-Xf-DjL"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="2Tj-3A-D4A"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4eZ-KO-Ek1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4eZ-KO-Ek1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="1" colorSpace="calibratedRGB"/>
@@ -603,13 +604,13 @@
             </objects>
             <point key="canvasLocation" x="-1751" y="-135"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="2vw-wL-cPE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="orA-F4-DHZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="9EZ-HQ-x4R"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star.png" id="9EZ-HQ-x4R"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HgV-hv-yn7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HgV-hv-yn7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.12156862765550613" green="0.12156862765550613" blue="0.12156862765550613" alpha="1" colorSpace="calibratedRGB"/>
@@ -629,7 +630,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home.png" width="32" height="32"/>
         <image name="placeholder.png" width="1280" height="960"/>
+        <image name="star.png" width="24" height="24"/>
         <image name="user-1.png" width="128" height="128"/>
         <image name="youtube.png" width="128" height="128"/>
     </resources>
