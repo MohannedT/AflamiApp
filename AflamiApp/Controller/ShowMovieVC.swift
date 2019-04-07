@@ -148,6 +148,10 @@ extension ShowMovieVC : UITableViewDataSource, UITableViewDelegate{
         modelLayer.openTrailerLink(key: (movie?.trailers[indexPath.row].key)!)
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     // MARK: - Trailers sections number
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

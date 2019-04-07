@@ -385,11 +385,11 @@
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trailersCell" rowHeight="85" id="c8z-7p-zJQ" customClass="ShowMovieTrailersCell" customModule="AflamiApp" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trailersCell" id="c8z-7p-zJQ" customClass="ShowMovieTrailersCell" customModule="AflamiApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="186" height="85"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8z-7p-zJQ" id="zp9-Jt-XZ2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="84"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHJ-ih-cXd">
@@ -399,33 +399,24 @@
                                                                         <constraint firstAttribute="height" constant="20" id="Kqf-ph-r9Z"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVQ-hE-Cy2">
-                                                                    <rect key="frame" x="36" y="8" width="142" height="14.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVQ-hE-Cy2">
+                                                                    <rect key="frame" x="36" y="8" width="142" height="68.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-0z-HAB">
-                                                                    <rect key="frame" x="36" y="30.5" width="142" height="13.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
+                                                                <constraint firstAttribute="bottomMargin" secondItem="EVQ-hE-Cy2" secondAttribute="bottom" id="1XR-Wt-DfQ"/>
                                                                 <constraint firstAttribute="topMargin" secondItem="EVQ-hE-Cy2" secondAttribute="top" id="57G-rU-fg1"/>
                                                                 <constraint firstItem="uHJ-ih-cXd" firstAttribute="leading" secondItem="zp9-Jt-XZ2" secondAttribute="leadingMargin" id="8n8-T0-mVG"/>
-                                                                <constraint firstItem="0b5-0z-HAB" firstAttribute="top" secondItem="EVQ-hE-Cy2" secondAttribute="bottom" constant="8" id="KWA-E3-vdi"/>
                                                                 <constraint firstAttribute="topMargin" secondItem="uHJ-ih-cXd" secondAttribute="top" id="TcV-Iz-nfi"/>
                                                                 <constraint firstAttribute="trailingMargin" secondItem="EVQ-hE-Cy2" secondAttribute="trailing" id="q3d-HA-3HY"/>
                                                                 <constraint firstItem="EVQ-hE-Cy2" firstAttribute="leading" secondItem="uHJ-ih-cXd" secondAttribute="trailing" constant="8" id="wWs-Us-wRo"/>
-                                                                <constraint firstItem="0b5-0z-HAB" firstAttribute="leading" secondItem="uHJ-ih-cXd" secondAttribute="trailing" constant="8" id="zAd-Er-6lV"/>
-                                                                <constraint firstAttribute="trailingMargin" secondItem="0b5-0z-HAB" secondAttribute="trailing" id="zyU-0L-MAa"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
                                                             <outlet property="imgMain" destination="uHJ-ih-cXd" id="gbm-as-iuR"/>
-                                                            <outlet property="labelDescription" destination="0b5-0z-HAB" id="e6Q-4O-eAM"/>
                                                             <outlet property="labelName" destination="EVQ-hE-Cy2" id="PhR-nX-KEj"/>
                                                         </connections>
                                                     </tableViewCell>
@@ -658,6 +649,6 @@
         <image name="youtube.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="seU-rh-x9m"/>
+        <segue reference="Jx5-qF-366"/>
     </inferredMetricsTieBreakers>
 </document>
