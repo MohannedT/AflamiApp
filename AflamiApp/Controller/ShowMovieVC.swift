@@ -20,7 +20,7 @@ class ShowMovieVC: UIViewController {
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
     @IBOutlet weak var trailersTableView: UITableView!
     @IBOutlet weak var rateView: CosmosView!
-    var favButton: UIButton?
+    var favButton: CustomFavButton?
     
     // MARK: - Properties
     let modelLayer : ModelLayer = ModelLayer(appDelegate: UIApplication.shared.delegate as! AppDelegate)
@@ -52,7 +52,8 @@ class ShowMovieVC: UIViewController {
         imagePosterImage.layer.masksToBounds = true
 
         //create a favourite button
-        favButton = UIButton(type: UIButtonType.custom)
+//        favButton = UIButton(type: UIButtonType.custom)
+        favButton = CustomFavButton()
         favButton?.setImage(UIImage(named: "like-0.png"), for: UIControlState.normal)
         favButton?.addTarget(self, action: #selector(ShowMovieVC.favouriteButtonTapped), for: UIControlEvents.touchUpInside)
         favButton?.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
@@ -80,6 +81,7 @@ class ShowMovieVC: UIViewController {
                 changeFavIconColor()
             }
         }
+        animateFavIcon()
     }
     
     func changeFavIconColor(){
@@ -90,6 +92,20 @@ class ShowMovieVC: UIViewController {
         }
     }
     
+    // MARK: - Fav icon animation
+    func animateFavIcon(){
+        self.favButton?.center.y += 10
+        self.favButton?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        self.favButton?.alpha = 0.5
+        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 0, options: [], animations: {
+            
+            self.favButton?.center.y -= 10
+            self.favButton?.transform = CGAffineTransform.identity
+            self.favButton?.alpha = 1
+            
+            
+        }, completion: nil)
+    }
 
     // MARK: - Fill UI items with movie data
     func fillMovieData(){
@@ -126,79 +142,3 @@ class ShowMovieVC: UIViewController {
     }
 
 }
-
-// MARK: - trailers table
-extension ShowMovieVC : UITableViewDataSource, UITableViewDelegate{
-    
-    // MARK: - Trailers section name
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let sectionName: String
-        switch section {
-        case 0:
-            sectionName = NSLocalizedString("Trailers", comment: "Trailers Section")
-        default:
-            sectionName = ""
-        }
-        return sectionName
-    }
-    
-    // MARK: - Open trailer video
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        modelLayer.openTrailerLink(key: (movie?.trailers[indexPath.row].key)!)
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    // MARK: - Trailers sections number
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    // MARK: - No of trailers
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return movie?.trailers.count ?? 0
-    }
-    
-    // MARK: - Trailers cells
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: TRAILERS_CELL_ID, for: indexPath) as! ShowMovieTrailersCell
-        
-        let site : String = movie?.trailers[indexPath.row].site ?? ""
-        let size : Int = movie?.trailers[indexPath.row].size ?? 0
-        
-        cell.labelName?.text = movie?.trailers[indexPath.row].name ?? ""
-        cell.labelDescription?.text = "\(site), \(size)p"
-        
-        return cell
-        
-    }
-    
-}
-
-
-// MARK: - reviews collection view
-extension ShowMovieVC : UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
-        return (movie?.reviews.count)!
-    }
-    
-    
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
-        let cell = reviewsCollectionView.dequeueReusableCell(withReuseIdentifier: REVIEWS_CELL_ID, for: indexPath) as! ShowMovieReviewsCell
-        
-        cell.author.text = movie?.reviews[indexPath.row].author ?? ""
-        cell.content.text = movie?.reviews[indexPath.row].content ?? ""
-        let imageName = (movie?.reviews[indexPath.row].image)!
-        cell.image.image = UIImage(named: (!imageName.isEmpty) ? imageName : "user-1.png")
-        
-        return cell
-    }
-
-    
-}
-
