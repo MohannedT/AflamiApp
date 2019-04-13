@@ -11,28 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tbH-KE-wLB">
-            <objects>
-                <viewController id="htz-7v-osc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ev0-Ea-wh5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Wms-mj-ZcF"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1uk-vH-EbH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.92156863212585449" green="0.92156863212585449" blue="0.92156863212585449" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jvx-q3-rQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3652" y="296"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="V2F-sd-OsH">
             <objects>
-                <tabBarController id="1j5-40-8k4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="startViewController" id="1j5-40-8k4" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="gkY-gB-wZm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -407,7 +389,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="186" height="85"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c8z-7p-zJQ" id="zp9-Jt-XZ2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="84"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="186" height="85"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youtube.png" translatesAutoresizingMaskIntoConstraints="NO" id="uHJ-ih-cXd">
@@ -667,6 +649,6 @@
         <image name="youtube.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jx5-qF-366"/>
+        <segue reference="seU-rh-x9m"/>
     </inferredMetricsTieBreakers>
 </document>
