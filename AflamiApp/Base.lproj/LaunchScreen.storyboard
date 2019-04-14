@@ -27,7 +27,7 @@
                                 <rect key="frame" x="32" y="639" width="311" height="12"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="60y-oy-YWY">
-                                        <rect key="frame" x="112" y="0.0" width="88" height="12"/>
+                                        <rect key="frame" x="109.5" y="0.0" width="93.5" height="12"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="linkedin.png" translatesAutoresizingMaskIntoConstraints="NO" id="GqR-FU-hYj" userLabel="img1">
                                                 <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -40,11 +40,11 @@
                                                 <rect key="frame" x="16" y="0.0" width="12" height="12"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AhmdMHasn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWX-DN-6gE">
-                                                <rect key="frame" x="32" y="0.0" width="56" height="12"/>
+                                                <rect key="frame" x="32" y="0.0" width="61.5" height="12"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="12" id="sbl-vV-XJt"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="9"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                 <color key="textColor" red="0.1215686277" green="0.1215686277" blue="0.1215686277" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>

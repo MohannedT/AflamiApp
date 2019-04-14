@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Collection view
-extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
+extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -60,5 +60,12 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource{
         
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (self.view.frame.size.width - 10 * 2) / 2 //some width
+        let height = width * 275 / 185 //ratio
+        return CGSize(width: width, height: height)
+    }
+
 }
 
