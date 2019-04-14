@@ -9,7 +9,7 @@
 import UIKit
 
 // MARK: - Collection view
-extension FavouriteVC : UICollectionViewDataSource, UICollectionViewDelegate{
+extension FavouriteVC : UICollectionViewDataSource, UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
@@ -42,6 +42,14 @@ extension FavouriteVC : UICollectionViewDataSource, UICollectionViewDelegate{
         
         return cell
         
+    }
+    
+    
+    // Set one cell per row
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (self.view.frame.size.width - 10 * 2) //some width
+        let height = width / 3 //ratio
+        return CGSize(width: width, height: height)
     }
     
 }

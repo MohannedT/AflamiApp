@@ -60,7 +60,7 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         
     }
     
-    
+    // Set two cells per row
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.size.width - 10 * 2) / 2 //some width
         let height = width * 275 / 185 //ratio
