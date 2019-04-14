@@ -48,7 +48,9 @@ extension ShowMovieVC : UICollectionViewDataSource, UICollectionViewDelegate{
             } else {
                 cell.castImage.image = UIImage(named: "user-1.png")
                 self.modelLayer.getCastImage(cast: (movie?.cast[indexPath.row])!, completionHandler: { (image) in
-                    cell.castImage?.image = image
+                    DispatchQueue.main.async {
+                        cell.castImage?.image = image
+                    }
                 })
             }
             return cell

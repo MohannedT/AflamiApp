@@ -20,5 +20,6 @@ enum MoviesEntity : String{
     case originalLanguage = "originalLanguage"
     case trailers = "trailers"
     case reviews = "reviews"
+    case cast = "cast"
 }
 

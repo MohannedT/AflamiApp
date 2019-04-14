@@ -38,8 +38,9 @@ class DataLayer{
         movieObj.setValue(movie.image, forKey: MoviesEntity.image.rawValue)
         movieObj.setValue(movie.trailers, forKey: MoviesEntity.trailers.rawValue)
         movieObj.setValue(movie.reviews, forKey: MoviesEntity.reviews.rawValue)
+        movieObj.setValue(movie.cast, forKey: MoviesEntity.cast.rawValue)
         
-        print("Succeed")
+        print("Added to CoreData!")
         do {
             try managedContext?.save()
         } catch let error as NSError {
@@ -73,6 +74,7 @@ class DataLayer{
                     movie.originalLanguage = (item.value(forKey: MoviesEntity.originalLanguage.rawValue) as! String?)!
                     movie.trailers = (item.value(forKey: MoviesEntity.trailers.rawValue) as! [Trailer]?)!
                     movie.reviews = (item.value(forKey: MoviesEntity.reviews.rawValue) as! [Review]?)!
+                    movie.cast = (item.value(forKey: MoviesEntity.cast.rawValue) as! [Cast]?)!
                 }
                 moviesList.append(movie)
             }
@@ -102,7 +104,7 @@ class DataLayer{
                 movie.originalLanguage = (item.value(forKey: MoviesEntity.originalLanguage.rawValue) as! String?)!
                 movie.trailers = (item.value(forKey: MoviesEntity.trailers.rawValue) as! [Trailer]?)!
                 movie.reviews = (item.value(forKey: MoviesEntity.reviews.rawValue) as! [Review]?)!
-                print(movie.title)
+                movie.cast = (item.value(forKey: MoviesEntity.cast.rawValue) as! [Cast]?)!
             }
             
         } catch let error as NSError {

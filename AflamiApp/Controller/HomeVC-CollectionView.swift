@@ -52,7 +52,9 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         } else {
             cell.imageView.image = UIImage(named: "placeholder.png")
             self.modelLayer.getMovieThumbnail(movie: (moviesList[indexPath.row]), completionHandler: { (image) in
-                cell.imageView?.image = image
+                DispatchQueue.main.async {
+                    cell.imageView?.image = image
+                }
             })
         }
         
