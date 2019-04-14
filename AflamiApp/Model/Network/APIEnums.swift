@@ -37,3 +37,15 @@ enum APIReview : String{
     case author = "author"
     case content = "content"
 }
+
+enum APICast : String{
+    case id = "id"
+    case character = "character"
+    case name = "name"
+    case profilePath = "profile_path"
+}
+
+enum APIImageSize : String{
+    case w185 = "w185"
+    case face66x66 = "w66_and_h66_face"
+}

@@ -18,6 +18,7 @@ class ShowMovieVC: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var imagePosterImage: UIImageView!
     @IBOutlet weak var reviewsCollectionView: UICollectionView!
+    @IBOutlet weak var castCollectionView: UICollectionView!
     @IBOutlet weak var trailersTableView: UITableView!
     @IBOutlet weak var rateView: CosmosView!
     var favButton: CustomFavButton?
@@ -30,6 +31,7 @@ class ShowMovieVC: UIViewController {
     var OFFLINE_MODE = false
     let TRAILERS_CELL_ID : String = "trailersCell"
     let REVIEWS_CELL_ID : String = "reviewsCell"
+    let CAST_CELL_ID : String = "castCell"
     let CORNER_RADIUS : CGFloat = 10
     
     override func viewDidLoad() {
@@ -38,6 +40,7 @@ class ShowMovieVC: UIViewController {
         fillMovieData()
         getTrailers()
         getReviews()
+        getCast()
         
         trailersTableView.rowHeight = UITableViewAutomaticDimension
         
@@ -117,6 +120,15 @@ class ShowMovieVC: UIViewController {
         labelOverview.text = movie?.overview
         labelTitle.text = movie?.title
         imagePosterImage.image = UIImage(data: (movie?.image)!)
+    }
+    
+    func getCast(){
+        if (!OFFLINE_MODE || movie?.trailers.count == 0){
+            modelLayer.getCast(movieId: (movie?.id)!) { (cast, error) in
+                self.movie?.cast = cast ?? []
+                self.castCollectionView.reloadData()
+            }
+        }
     }
     
     func getTrailers(){

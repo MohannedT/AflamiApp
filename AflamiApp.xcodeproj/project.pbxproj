@@ -12,6 +12,8 @@
 		9EA1D44ABFC4B33D8C7CA1F1 /* Pods_AflamiApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F56D9A0FEE38E977BB4ED6E /* Pods_AflamiApp.framework */; };
 		E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */; };
 		E20DA7FA2260CA2600D9A770 /* CustomFavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20DA7F92260CA2600D9A770 /* CustomFavButton.swift */; };
+		E20E8BF62263A2E700C56351 /* ShowMovieCastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E8BF52263A2E700C56351 /* ShowMovieCastCell.swift */; };
+		E20E8BF82263AD4800C56351 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20E8BF72263AD4800C56351 /* Cast.swift */; };
 		E25C335C22540BBF00329ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25C335B22540BBF00329ADD /* AppDelegate.swift */; };
 		E25C336122540BBF00329ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25C335F22540BBF00329ADD /* Main.storyboard */; };
 		E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E25C336222540BBF00329ADD /* AflamiApp.xcdatamodeld */; };
@@ -34,7 +36,7 @@
 		E288ED0A2259333300ADD2A4 /* user-1.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED062259333300ADD2A4 /* user-1.png */; };
 		E288ED0B2259333300ADD2A4 /* user-2.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED072259333300ADD2A4 /* user-2.png */; };
 		E288ED0C2259333300ADD2A4 /* user-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E288ED082259333300ADD2A4 /* user-3.png */; };
-		E2AAF3FF2261366600E7017B /* ShowMovieVC-Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews.swift */; };
+		E2AAF3FF2261366600E7017B /* ShowMovieVC-Reviews-Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews-Cast.swift */; };
 		E2AAF4012261372200E7017B /* ShowMoviesVC-Trailers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAF4002261372200E7017B /* ShowMoviesVC-Trailers.swift */; };
 		E2AAF4032261378600E7017B /* HomeVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAF4022261378600E7017B /* HomeVC-CollectionView.swift */; };
 		E2AAF406226137C200E7017B /* FavouriteVC_CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAF405226137C200E7017B /* FavouriteVC_CollectionView.swift */; };
@@ -90,6 +92,8 @@
 		8BB5F6ED88D852B5ABC56818 /* Pods-AflamiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AflamiApp.debug.xcconfig"; path = "Target Support Files/Pods-AflamiApp/Pods-AflamiApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieVC.swift; sourceTree = "<group>"; };
 		E20DA7F92260CA2600D9A770 /* CustomFavButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFavButton.swift; sourceTree = "<group>"; };
+		E20E8BF52263A2E700C56351 /* ShowMovieCastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMovieCastCell.swift; sourceTree = "<group>"; };
+		E20E8BF72263AD4800C56351 /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		E25C335822540BBE00329ADD /* AflamiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AflamiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E25C335B22540BBF00329ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E25C336022540BBF00329ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,7 +122,7 @@
 		E288ED062259333300ADD2A4 /* user-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-1.png"; sourceTree = "<group>"; };
 		E288ED072259333300ADD2A4 /* user-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-2.png"; sourceTree = "<group>"; };
 		E288ED082259333300ADD2A4 /* user-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-3.png"; sourceTree = "<group>"; };
-		E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShowMovieVC-Reviews.swift"; sourceTree = "<group>"; };
+		E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews-Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShowMovieVC-Reviews-Cast.swift"; sourceTree = "<group>"; };
 		E2AAF4002261372200E7017B /* ShowMoviesVC-Trailers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ShowMoviesVC-Trailers.swift"; sourceTree = "<group>"; };
 		E2AAF4022261378600E7017B /* HomeVC-CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HomeVC-CollectionView.swift"; sourceTree = "<group>"; };
 		E2AAF405226137C200E7017B /* FavouriteVC_CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC_CollectionView.swift; sourceTree = "<group>"; };
@@ -281,6 +285,7 @@
 				E25C339422540D8300329ADD /* Trailer.swift */,
 				E25C339622540D9A00329ADD /* Review.swift */,
 				E2D7D2B12258F2B600AC9714 /* Movie.swift */,
+				E20E8BF72263AD4800C56351 /* Cast.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -343,8 +348,9 @@
 				E20C3BB92256CC6600CCCB67 /* ShowMovieVC.swift */,
 				E2CE88FB2258033300DB6402 /* ShowMovieReviewsCell.swift */,
 				E2CE890122580D2D00DB6402 /* ShowMovieTrailersCell.swift */,
+				E20E8BF52263A2E700C56351 /* ShowMovieCastCell.swift */,
 				E20DA7F92260CA2600D9A770 /* CustomFavButton.swift */,
-				E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews.swift */,
+				E2AAF3FE2261366600E7017B /* ShowMovieVC-Reviews-Cast.swift */,
 				E2AAF4002261372200E7017B /* ShowMoviesVC-Trailers.swift */,
 			);
 			name = ShowMovie;
@@ -630,6 +636,7 @@
 			files = (
 				E2D7D2B62258FFF900AC9714 /* ListType.swift in Sources */,
 				E25C339522540D8300329ADD /* Trailer.swift in Sources */,
+				E20E8BF82263AD4800C56351 /* Cast.swift in Sources */,
 				E25C339722540D9A00329ADD /* Review.swift in Sources */,
 				E25C339022540CD400329ADD /* ModelLayer.swift in Sources */,
 				E2AAF4012261372200E7017B /* ShowMoviesVC-Trailers.swift in Sources */,
@@ -642,11 +649,12 @@
 				E2D7D2B42258FCB700AC9714 /* FavouriteCollectionViewCell.swift in Sources */,
 				E25C336422540BBF00329ADD /* AflamiApp.xcdatamodeld in Sources */,
 				E25C33A62254252800329ADD /* HomeCollectionViewCell.swift in Sources */,
+				E20E8BF62263A2E700C56351 /* ShowMovieCastCell.swift in Sources */,
 				E2AAF406226137C200E7017B /* FavouriteVC_CollectionView.swift in Sources */,
 				E2D7D2B22258F2B600AC9714 /* Movie.swift in Sources */,
 				E2CE88FE2258053000DB6402 /* HomeVC.swift in Sources */,
 				E2F57955225AA3F8001BC8B4 /* APIEnums.swift in Sources */,
-				E2AAF3FF2261366600E7017B /* ShowMovieVC-Reviews.swift in Sources */,
+				E2AAF3FF2261366600E7017B /* ShowMovieVC-Reviews-Cast.swift in Sources */,
 				E20DA7FA2260CA2600D9A770 /* CustomFavButton.swift in Sources */,
 				E2D7D2B02258F03E00AC9714 /* FavouriteVC.swift in Sources */,
 				E20C3BBA2256CC6600CCCB67 /* ShowMovieVC.swift in Sources */,

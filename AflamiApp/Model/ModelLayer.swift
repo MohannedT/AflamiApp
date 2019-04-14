@@ -55,7 +55,7 @@ class ModelLayer{
     func getMovieThumbnail(movie : Movie, completionHandler : @escaping (UIImage?) -> Void){
         
         self.turnNetwokIndicatorOn()
-        networkLayer.getImageUsingPosterPath(posterPath: movie.posterPath) { (data, error) in
+        networkLayer.getImageUsingPosterPath(posterPath: movie.posterPath, imageSize: APIImageSize.w185) { (data, error) in
             if let imageData = data{
                 movie.image = imageData
                 // Convert that Data into an image and do what you wish with it.
@@ -67,7 +67,6 @@ class ModelLayer{
                 print(error.debugDescription)
             }
         }
-        
     }
     
     
@@ -134,6 +133,59 @@ class ModelLayer{
                 self.turnNetwokIndicatorOff()
                 completionHandler(nil, error)
                 
+            }
+        }
+    }
+    
+    //MARK: - Get cast using movie id
+    func getCast (movieId : Int, completionHandler : @escaping (Array<Cast>?, Error?) -> Void){
+        
+        self.turnNetwokIndicatorOn()
+        var castlist : Array<Cast> = []
+        let url : String = "\(baseUrl)/3/movie/\(movieId)/credits?api_key=\(apiKey)"
+        
+        networkLayer.executeNetwordRequest(url: url) { (value, error) in
+            if let result = value {
+                let castArray = result["cast"] as! Array<[String : Any]>
+                for item in castArray{
+                    
+                    let cast = Cast()
+                    cast.id = item[APICast.id.rawValue] as? String ?? ""
+                    cast.character = item[APICast.character.rawValue] as? String ?? ""
+                    cast.name = item[APICast.name.rawValue] as? String ?? ""
+                    cast.profilePath = item[APICast.profilePath.rawValue] as? String ?? ""
+                    
+                    print(cast.name ?? "")
+                    
+                    castlist.append(cast)
+                }
+                
+                self.turnNetwokIndicatorOff()
+                completionHandler(castlist, nil)
+                
+            } else {
+                
+                self.turnNetwokIndicatorOff()
+                completionHandler(nil, error)
+                
+            }
+        }
+    }
+    
+    //MARK - Get Actor Image
+    func getCastImage(cast : Cast, completionHandler : @escaping (UIImage?) -> Void){
+        
+        self.turnNetwokIndicatorOn()
+        networkLayer.getImageUsingPosterPath(posterPath: cast.profilePath ?? "", imageSize: APIImageSize.face66x66) { (data, error) in
+            if let imageData = data{
+                cast.image = imageData
+                // Convert that Data into an image and do what you wish with it.
+                let image = UIImage(data: imageData)
+                self.turnNetwokIndicatorOff()
+                completionHandler(image)
+            } else {
+                self.turnNetwokIndicatorOff()
+                print(error.debugDescription)
             }
         }
     }

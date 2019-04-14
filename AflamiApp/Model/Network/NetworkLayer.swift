@@ -31,8 +31,8 @@ class NetworkLayer{
     }
     
     //MARK - Get image using thumbnail id
-    func getImageUsingPosterPath(posterPath : String, completionHandler : @escaping (Data?, Error?) -> Void){
-        let mURL = URL(string: "https://image.tmdb.org/t/p/w185\(posterPath)")!
+    func getImageUsingPosterPath(posterPath : String, imageSize : APIImageSize, completionHandler : @escaping (Data?, Error?) -> Void){
+        let mURL = URL(string: "https://image.tmdb.org/t/p/\(imageSize.rawValue)\(posterPath)")!
         
         // Creating a session object with the default configuration.
         let session = URLSession(configuration: .default)

@@ -20,5 +20,6 @@ public class Movie{
     var image : Data?
     var trailers : Array<Trailer> = []
     var reviews : Array<Review> = []
+    var cast : Array<Cast> = []
     
 }
